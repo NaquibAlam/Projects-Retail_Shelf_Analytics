@@ -1,0 +1,6 @@
+              Shelf_1  Shelf_2  Shelf_3
+Chesterfield      3.0      0.0      0.0
+Muratti           3.0      0.0      0.0
+Marlboro          4.0      0.0      0.0
+Parliament        2.0      0.0      0.0
+Winston           2.0      0.0      0.0

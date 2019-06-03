@@ -1,0 +1,6 @@
+              Shelf_1  Shelf_2  Shelf_3  Occupied_Product_Area_(%)    Length
+Chesterfield     80.0      0.0      7.0                       30.0  2.923445
+Muratti           0.0     84.0      7.0                       30.0  2.923445
+Marlboro          0.0      0.0     86.0                       29.0  2.923445
+Parliament        0.0      7.0      0.0                        2.0  2.923445
+Winston           0.0      7.0      0.0                        2.0  2.923445

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dashboard Home</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="static/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="static/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="static/vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Retail Shelf Manager</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Store 1 Task 1</strong>
+                                        <span class="pull-right text-muted">40% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Store 1 Task 2</strong>
+                                        <span class="pull-right text-muted">20% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Store 2 Task 1</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Task History</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div class="alert alert-danger">
+                                    <i class="fa fa-envelope fa-fw"></i> Critical Alert
+                                    <span class="pull-right text-muted small">Compliance failure in Store 3</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="alert alert-info">
+                                    <i class="fa fa-envelope fa-fw"></i> Inventory Update
+                                    <span class="pull-right text-muted small">Store 3 inventory updated</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Notification History</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="index"><i class="fa fa-home fa-fw"></i> Home</a>
+                        </li>
+                        <li>
+                            <a href="store"><i class="fa fa-database fa-fw"></i> Store Management</a>
+                        </li>
+                        <li>
+                            <a>
+                              <i class="fa fa-cogs fa-fw"></i>
+                              Update Compliance
+                              <span class="fa arrow"></span>
+                            </a>
+                            <ul class="nav nav-second-level collapse" aria-expanded="true" style="">
+                                <li>
+                                    <a href="fileUpload"><i class="fa fa-image fa-fw"></i> Upload Files</a>
+                                </li>
+                                <li>
+                                    <a href="results"><i class="fa fa-bar-chart-o fa-fw"></i> Results</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Dashboard</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="intro-well" class="well well-lg">
+                        <!-- <div class="col-lg-12"> -->
+                        <button id='btn-circle' type="button" class="btn btn-primary btn-circle" style="border-color: #f5f5f5; border-width: 0px; float: right;"><i class="fa fa-times"></i></button>
+                        <!-- </div> -->
+                        <h4>Welcome</h4>
+                        <p><i>Fractal Analytics</i> presents an end to end <i>Retail Shelf Management</i> solution.</p>
+                        <p>Forget the clumsiness of handling huge inventory details, unreliability of manual inspection and vague figures that do not reflect the actual market shares. Our solution is a rich hassle free experience, with completely automated pipeline, designed to eliminate any human error and make compliance montioring as easy as taking a picture.</p>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Process Flow Introduction  <i class="fa fa-chevron-circle-down"></i></a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul class="timeline">
+                                        <li>
+                                            <div class="timeline-badge"><i class="fa fa-camera"></i>
+                                            </div>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title">Image Capturing</h4>
+                                                    <p><small class="text-muted"><i class="fa fa-home"></i> At the store by the Sales <abbr title="Representative" class="initialism">Rep</abbr>.</small>
+                                                    </p>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p>The sales representative will take slightly pictures of the store shelves and upload them onto our servers.</p>
+                                                    <p>Our algorithm doesn't put any restriction on the order of images to be captured and evaluates the <i>Shelf Share</i> by adaptively figuring out the proper shelf image ordering. This is done at the next stage.</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-inverted">
+                                            <div class="timeline-badge info"><i class="fa fa-image"></i>
+                                            </div>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title">Image Processing &amp; Stitching</h4>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p>Our algorithm figures out the exact original shelf arrangement for the brands by performing image stitching on all the possible combinations of the arrangments of the input images.</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="timeline-badge warning"><i class="fa fa-cogs"></i>
+                                            </div>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title">Shelf Share Calculation</h4>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p>The processed outputs are then considered as separate shelves. We detect the product boxes with high precision and classify the varients with an accuracy above <strong>95%</strong>.</p>
+                                                    <p>The box locations are then used to determine the relative positions of independent shelves within the image and then  evaluates several metrics like <em>Shelf Facings per brand, Shelf Share, Position Maps, Out of Stock, etc.</em></p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-inverted">
+                                            <div class="timeline-badge warning"><i class="fa fa-bar-chart-o"></i>
+                                            </div>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title">Scores &amp; Compliance Display</h4>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p>The metrics once obtained are then used to compute <em>Compliance</em> and <em>Product Visibility Score</em> for the shelves and then forwared to compute the same for the whole store.</p>
+                                                    <p>The complaince is computed with regard to the Product Facings, the Planogram and the Visibility for the SKUs.</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-inverted">
+                                            <div class="timeline-badge success"><i class="fa fa-save"></i>
+                                            </div>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-body">
+                                                    <p>We allow the user with multiple functionalities to handle the results obtained.</p>
+                                                    <hr>
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                                            <i class="fa fa-gear"></i> <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#">Append to Store Dashboard</a>
+                                                            </li>
+                                                            <li><a href="#">Copy to another Store</a>
+                                                            </li>
+                                                            <li><a href="#">Forward to Mail</a>
+                                                            </li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="#">Discard Results</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="timeline-badge primary"><i class="fa fa-dashboard"></i>
+                                            </div>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title">Store Dashboard</h4>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p>Finally, a consolidated dashboard is obtained for the store reflecting the overall store performace over a period of time, in terms of compliance and the variation of the metrics for different brands and categories.</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+
+            <!-- /.row -->
+            <div class="row"><div class="col-lg-6" id="maps" align="center"><br/><br/><br/><img src="/static/images/map.jpg" style="width: 300px;"></div><div class="col-lg-6" id="doNutLie"></div></div>
+            <div class="row"><div class="col-lg-12" id="fakeTime"></div></div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="static/vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="static/vendor/raphael/raphael.min.js"></script>
+    <script src="static/vendor/morrisjs/morris.min.js"></script>
+    <script src="static/data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="static/scripts/js/sb-admin-2.js"></script>
+    <script type="text/javascript">
+        document.getElementById("btn-circle").onclick = function() {
+            document.getElementById('intro-well').style.display = 'none';
+        }
+
+
+        var colors = Highcharts.getOptions().colors,
+            categories = [
+                "Chesterfield",
+                "Marlboro",
+                "Winston",
+                "Kent",
+                "Viceroy",
+                "Parliament",
+                "Muratti"
+            ],
+            data = [
+                {
+                    "y": 62.74,
+                    "color": colors[2],
+                    "drilldown": {
+                        "name": "Chesterfield",
+                        "categories": [
+                            "12 Pack",
+                            "8 Pack",
+                            "6 Pack"
+                        ],
+                        "data": [
+                            0.1,
+                            1.3,
+                            53.02,
+                        ]
+                    }
+                },
+                {
+                    "y": 10.57,
+                    "color": colors[1],
+                    "drilldown": {
+                        "name": "Marlboro",
+                        "categories": [
+                            "12 Pack",
+                            "8 Pack",
+                            "6 Pack"
+                        ],
+                        "data": [
+                            1.02,
+                            7.36,
+                            0.35,
+                        ]
+                    }
+                },
+                {
+                    "y": 7.23,
+                    "color": colors[0],
+                    "drilldown": {
+                        "name": "Winston",
+                        "categories": [
+                            "12 Pack",
+                            "8 Pack",
+                            "6 Pack"
+                        ],
+                        "data": [
+                            6.2,
+                            0.29,
+                            0.27
+                        ]
+                    }
+                },
+                {
+                    "y": 5.58,
+                    "color": colors[3],
+                    "drilldown": {
+                        "name": "Kent",
+                        "categories": [
+                            "12 Pack",
+                            "8 Pack",
+                            "6 Pack"
+                        ],
+                        "data": [
+                            3.39,
+                            0.96,
+                            0.36
+                        ]
+                    }
+                },
+                {
+                    "y": 4.02,
+                    "color": colors[5],
+                    "drilldown": {
+                        "name": "Viceroy",
+                        "categories": [
+                            "12 Pack",
+                            "8 Pack",
+                            "6 Pack"
+                        ],
+                        "data": [
+                            2.6,
+                            0.92,
+                            0.4,
+                            0.1
+                        ]
+                    }
+                },
+                {
+                    "y": 1.92,
+                    "color": colors[4],
+                    "drilldown": {
+                        "name": "Parliament",
+                        "categories": [
+                            "Opera v50.0",
+                            "Opera v49.0",
+                            "Opera v12.1"
+                        ],
+                        "data": [
+                            0.96,
+                            0.82,
+                            0.14
+                        ]
+                    }
+                },
+                {
+                    "y": 7.62,
+                    "color": colors[6],
+                    "drilldown": {
+                        "name": 'Muratti',
+                        "categories": [
+                            "12 Pack",
+                            "8 Pack",
+                            "6 Pack"
+                        ],
+                        "data": [
+                            5.5,
+                            1.05,
+                            1.07
+                        ]
+                    }
+                }
+            ],
+            browserData = [],
+            versionsData = [],
+            i,
+            j,
+            dataLen = data.length,
+            drillDataLen,
+            brightness;
+
+
+        // Build the data arrays
+        for (i = 0; i < dataLen; i += 1) {
+            // add browser data
+            browserData.push({
+                name: categories[i],
+                y: data[i].y,
+                color: data[i].color
+            });
+
+            // add version data
+            drillDataLen = data[i].drilldown.data.length;
+            for (j = 0; j < drillDataLen; j += 1) {
+                brightness = 0.2 - (j / drillDataLen) / 5;
+                versionsData.push({
+                    name: data[i].drilldown.categories[j],
+                    y: data[i].drilldown.data[j],
+                    color: Highcharts.Color(data[i].color).brighten(brightness).get()
+                });
+            }
+        }
+
+        // Create the chart
+        Highcharts.chart('doNutLie', {
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'Cigarettes shelf share, January, 2018'
+            },
+            yAxis: {
+                title: {
+                    text: 'Total percent shelf share'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    shadow: false,
+                    center: ['50%', '50%']
+                }
+            },
+            tooltip: {
+                valueSuffix: '%'
+            },
+            series: [{
+                name: 'Cigarette',
+                data: browserData,
+                size: '60%',
+                dataLabels: {
+                    formatter: function () {
+                        return this.y > 5 ? this.point.name : null;
+                    },
+                    color: '#ffffff',
+                    distance: -30
+                }
+            }, {
+                name: 'Versions',
+                data: versionsData,
+                size: '80%',
+                innerSize: '60%',
+                dataLabels: {
+                    formatter: function () {
+                        // display only if larger than 1
+                        return this.y > 1 ? '<b>' + this.point.name + ':</b> ' +
+                            this.y + '%' : null;
+                    }
+                },
+                id: 'versions'
+            }],
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 400
+                    },
+                    chartOptions: {
+                        series: [{
+                            id: 'versions',
+                            dataLabels: {
+                                enabled: false
+                            }
+                        }]
+                    }
+                }]
+            }
+        });
+
+        Highcharts.chart('fakeTime', {
+            chart: {
+                type: 'spline'
+            },
+            title: {
+                text: 'Monthly Brand Facings Variation'
+            },
+            xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            yAxis: {
+                title: {
+                    text: 'SKU Facings'
+                },
+                labels: {
+                    formatter: function () {
+                        return this.value;
+                    }
+                }
+            },
+            tooltip: {
+                crosshairs: true,
+                shared: true
+            },
+            plotOptions: {
+                spline: {
+                    marker: {
+                        radius: 4,
+                        lineColor: '#666666',
+                        lineWidth: 1
+                    }
+                }
+            },
+            series: [{
+                name: 'Chesterfield',
+                marker: {
+                    symbol: 'square'
+                },
+                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+
+            }, {
+                name: 'Kent',
+                marker: {
+                    symbol: 'diamond'
+                },
+                data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+            }, {
+                name: 'Marlboro',
+                marker: {
+                    symbol: 'bubble'
+                },
+                data: [5.3, 7, 8.6, 6.3, 10.2, 12.7, 13.2, 14.9, 15.7, 18.6, 16.3, 16.9]
+            }]
+        });
+    </script>
+
+</body>
+
+</html>

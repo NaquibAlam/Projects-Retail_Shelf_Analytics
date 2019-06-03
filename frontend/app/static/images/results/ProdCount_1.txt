@@ -1,0 +1,6 @@
+              Shelf_1  Shelf_2  Shelf_3  Total  Number_of_Products_(%)
+Chesterfield     12.0      0.0      1.0   13.0                    32.0
+Muratti           0.0     12.0      1.0   13.0                    32.0
+Marlboro          0.0      0.0     13.0   13.0                    32.0
+Parliament        0.0      1.0      0.0    1.0                     2.0
+Winston           0.0      1.0      0.0    1.0                     2.0

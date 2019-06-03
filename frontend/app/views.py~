@@ -1,0 +1,71 @@
+# views.py
+
+<<<<<<< HEAD
+from flask import render_template, jsonify, request, flash
+=======
+from flask import render_template, redirect, url_for, flash
+>>>>>>> 501ac5c5a84b52eb8b7c3cb5afb9d618b1186505
+
+from app import app
+import json
+
+@app.route('/')
+def index():
+    return render_template('login.html')
+
+# @app.route('/')
+# def init():
+#     return render_template("login.html")
+
+# @app.route('/login')
+# def login():
+#     return render_template("login.html")
+
+# @app.route('/forgot-password')
+# def forgot_password():
+#     return render_template("forgot-password.html")
+
+# In progress , as per tutorial
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    """
+    Handle requests to the /register route
+    Add an employee to the database through the registration form
+    """
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        employee = Employee(email=form.email.data,
+                            username=form.username.data,
+                            first_name=form.first_name.data,
+                            last_name=form.last_name.data,
+                            password=form.password.data)
+
+        # add employee to the database
+        db.session.add(employee)
+        db.session.commit()
+        flash('You have successfully registered! You may now login.')
+
+        # redirect to the login page
+        return redirect(url_for('app.index'))
+
+    # load registration template
+    return render_template('register.html', form=form, title='Register')
+
+# @app.route('/Analysis_Management.html')
+# def Analysis_Management():
+#     return render_template("Analysis_Management.html")
+
+# @app.route('/Data_Management.html')
+# def Data_Management():
+#     return render_template("Data_Management.html")
+
+@app.route('/RegisterUser', methods = ['POST','GET'])
+def RegisterUser():
+	print("kat gaya");
+	print(request.method);
+	print(request.form);
+	data = {"First_Name" : request.form['First_Name']};
+	#a = json.loads(data)
+	print("in POST request flask");
+	print(data);
+	return(jsonify(data));

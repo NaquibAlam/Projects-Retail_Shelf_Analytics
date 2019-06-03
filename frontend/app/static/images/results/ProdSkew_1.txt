@@ -1,0 +1,7 @@
+              Shelf_1   Shelf_2       Heat
+Chesterfield      0.0  0.000000  14.149468
+Muratti           0.0  0.000000  46.396358
+Marlboro          0.0  0.000000  29.661975
+Parliament        0.0  0.000000   2.197989
+Winston           0.0  0.000000   7.307391
+Total            41.0  2.923445  99.713181
