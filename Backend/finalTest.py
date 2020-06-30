@@ -18,14 +18,14 @@ import time
 
 from keras.models import model_from_json
 
-graph_path = '/data1/paritosh.pandey/model/frozen_inference_graph.pb'
+graph_path = '/data1/naquib.alam/model/frozen_inference_graph.pb'
 with tf.gfile.FastGFile(graph_path,'rb') as f:
     graph_def = tf.GraphDef()
     graph_def.ParseFromString(f.read())
     print('Object detection module loaded...')
     
 name = 'C4_P06_N1_S4_1.JPG'
-image_path = '/data1/paritosh.pandey/CIGDataset/ShelfImages/' + name
+image_path = '/data1/naquib.alam/CIGDataset/ShelfImages/' + name
 img = Image.open(image_path)
 ing = np.array(img)
 ing = ing[:, :, ::-1].copy()
@@ -90,11 +90,11 @@ for i in range(num_detections):
 
 #cv.imshow('TensorFlow MobileNet-SSD', ing)
 result = Image.fromarray(ing)
-result.save('/data1/paritosh.pandey/result.jpg')
+result.save('/data1/naquib.alam/result.jpg')
 print('Resulting image saved...')
 
-model_json = "/data1/paritosh.pandey/model_30_32_cropped.json"
-weights = "/data1/paritosh.pandey/weights_30_32_cropped.h5"
+model_json = "/data1/naquib.alam/model_30_32_cropped.json"
+weights = "/data1/naquib.alam/weights_30_32_cropped.h5"
 arch_file_json = open(model_json,'r')
 model_json = arch_file_json.read()
 arch_file_json.close()
