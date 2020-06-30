@@ -33,12 +33,12 @@ class ShelfShare(object):
     loaded_model = None
     noOfPromo = None
     
-    def __init__(self, path = '/data1/paritosh.pandey/model/frozen_inference_graph.pb',
-                 model = "/data1/paritosh.pandey/model_31_32_2_sgd.json",
-                 weights = "/data1/paritosh.pandey/weights_31_32_2_sgd.h5"):
-    # def trial(self, path = '/data1/paritosh.pandey/model/frozen_inference_graph.pb',
-    #              model = "/data1/paritosh.pandey/model_31_32_2_sgd.json",
-    #              weights = "/data1/paritosh.pandey/weights_31_32_2_sgd.h5"):
+    def __init__(self, path = '/data1/naquib.alam/model/frozen_inference_graph.pb',
+                 model = "/data1/naquib.alam/model_31_32_2_sgd.json",
+                 weights = "/data1/naquib.alam/weights_31_32_2_sgd.h5"):
+    # def trial(self, path = '/data1/naquib.alam/model/frozen_inference_graph.pb',
+    #              model = "/data1/naquib.alam/model_31_32_2_sgd.json",
+    #              weights = "/data1/naquib.alam/weights_31_32_2_sgd.h5"):
         if self.graph_def == None:
             self._graph_load(path)
         if self.loaded_model == None:
@@ -62,7 +62,7 @@ class ShelfShare(object):
         self.loaded_model.load_weights(weights)
         # print('Classifier loaded...')
         
-    def _image_load(self, path = '/data1/paritosh.pandey/CIGDataset/ShelfImages/C4_P06_N1_S4_1.JPG'):
+    def _image_load(self, path = '/data1/naquib.alam/CIGDataset/ShelfImages/C4_P06_N1_S4_1.JPG'):
         image_path = path
         img = Image.open(image_path)
         self.ing = np.array(img)
@@ -539,7 +539,7 @@ class ShelfShare(object):
             #statsDf.at[prodNames[j], "Q3"] = np.percentile(prodStat,75)
         #statsDf.dropna(subset=['Mean'],axis=0,inplace=True)
 
-        statsDf = pd.read_fwf('/data1/paritosh.pandey/stats/ShelfStatDF_354.txt')
+        statsDf = pd.read_fwf('/data1/naquib.alam/stats/ShelfStatDF_354.txt')
         statsDf.set_index([statsDf['Unnamed: 0'].tolist()], inplace = True)
         statsDf.drop(columns = ['Unnamed: 0'], inplace = True)
         statsDf = statsDf.loc[df.index.tolist()[:-1]]
@@ -708,7 +708,7 @@ class ShelfShare(object):
             rows = int(cols/aspectRatio)
 
 
-        fullpath = os.path.join('/data1/paritosh.pandey/static/results', inputfolder)
+        fullpath = os.path.join('/data1/naquib.alam/static/results', inputfolder)
 
         # resultC = Image.fromarray(cv.resize(self.ing,(rows,cols)))
         r = re.compile(r'result_\d+.jpg$')
@@ -752,9 +752,9 @@ class ShelfShare(object):
         
         cv.imwrite(fullpath + '/result_' + str(end) + '.jpg', cv.resize(self.ing, (rows, cols)))
         cv.imwrite(fullpath + '/resultP_' + str(end) + '.jpg', cv.resize(self.imgCropTest, (rows, cols)))
-        # cv.imwrite('/data1/paritosh.pandey/static/resultC_'+str(end)+'.jpg', cv.resize(self.ing,(rows,cols)))
-        # result.save('/data1/paritosh.pandey/static/result_'+str(end)+'.jpg')
-        # resultC.save('/data1/paritosh.pandey/static/resultC_'+str(end)+'.jpg')
+        # cv.imwrite('/data1/naquib.alam/static/resultC_'+str(end)+'.jpg', cv.resize(self.ing,(rows,cols)))
+        # result.save('/data1/naquib.alam/static/result_'+str(end)+'.jpg')
+        # resultC.save('/data1/naquib.alam/static/resultC_'+str(end)+'.jpg')
         # print('Resulting image saved...')
         
         df = results[1]
@@ -827,12 +827,12 @@ def main_fn(inputfolder):
     #     if os.path.isfile(os.path.join('static', f)):
     #         os.remove(os.path.join('static',f))
 
-    fullpath = os.path.join('/data1/paritosh.pandey/static/results', inputfolder)
+    fullpath = os.path.join('/data1/naquib.alam/static/results', inputfolder)
     try:
         os.mkdir(fullpath)
     except OSError as exc:
         try:
-            os.mkdir('/data1/paritosh.pandey/static/results')
+            os.mkdir('/data1/naquib.alam/static/results')
             os.mkdir(fullpath)
         except OSError as e:
             if e.errno != errno.EEXIST:
@@ -843,7 +843,7 @@ def main_fn(inputfolder):
             raise
         pass
 
-    path = os.path.join('/data1/paritosh.pandey/static/temp', inputfolder)
+    path = os.path.join('/data1/naquib.alam/static/temp', inputfolder)
     noOfShelves = 0
     for f in os.listdir(path):
         if os.path.isfile(os.path.join(path, f)):
@@ -857,6 +857,6 @@ def main_fn(inputfolder):
     return table
 
 # if __name__=='__main__':
-#     main_fn(os.path.join('/data1/paritosh.pandey/static/temp', inputfolder))
+#     main_fn(os.path.join('/data1/naquib.alam/static/temp', inputfolder))
 
 #main_fn(sys.argv[1])
