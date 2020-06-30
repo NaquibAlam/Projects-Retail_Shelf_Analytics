@@ -39,13 +39,13 @@ def _execution(ing,graph_def):
 
 def main():
     print('Main starts...')
-    graph_path = '/data1/paritosh.pandey/model/frozen_inference_graph.pb'
+    graph_path = '/data1/naquib.alam/model/frozen_inference_graph.pb'
     obj_img = __init__(graph_path)
     
-    for filename in os.listdir('/data1/paritosh.pandey/test/'):
-        image_under_test = _img_load_process('/data1/paritosh.pandey/test/'+filename)
+    for filename in os.listdir('/data1/naquib.alam/test/'):
+        image_under_test = _img_load_process('/data1/naquib.alam/test/'+filename)
         output = _execution(image_under_test,obj_img)
-        with open('/data1/paritosh.pandey/'+filename+'.pkl','wb') as f:
+        with open('/data1/naquib.alam/'+filename+'.pkl','wb') as f:
             pk.dump(output,f)
     
     return
