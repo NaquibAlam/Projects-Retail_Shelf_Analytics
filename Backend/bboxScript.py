@@ -4,9 +4,9 @@ from PIL import Image
 import numpy as np
 import tensorflow as tf
 
-df = pd.read_csv('/data1/paritosh.pandey/data/test_labels.csv')
+df = pd.read_csv('/data1/naquib.alam/data/test_labels.csv')
 
-with tf.gfile.FastGFile('/data1/paritosh.pandey/model/frozen_inference_graph.pb','rb') as f:
+with tf.gfile.FastGFile('/data1/naquib.alam/model/frozen_inference_graph.pb','rb') as f:
     graph_def = tf.GraphDef()
     graph_def.ParseFromString(f.read())
 
@@ -17,7 +17,7 @@ tf.import_graph_def(graph_def, name='')
 for name in df.filename.unique():
     #name = df.filename[0]
     # Read and preprocess an image.
-    img = Image.open('/data1/paritosh.pandey/CIGDataset/ShelfImages/'+name)
+    img = Image.open('/data1/naquib.alam/CIGDataset/ShelfImages/'+name)
     inp = np.array(img)
     inp = inp[:, :, ::-1].copy()
     rows = inp.shape[0]
@@ -43,5 +43,5 @@ for name in df.filename.unique():
 
     print('Saving file name: ',name)
     result = Image.fromarray(inp)
-    result.save('/data1/paritosh.pandey/CIGDataset/Results/'+name)
+    result.save('/data1/naquib.alam/CIGDataset/Results/'+name)
     print('Saved')
