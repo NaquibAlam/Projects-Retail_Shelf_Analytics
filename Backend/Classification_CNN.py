@@ -203,8 +203,8 @@ def do_predict(model_json,weights,base_dir_split,n_images,dopredict=False):
     return pred_label
     
 if __name__ == "__main__":
-    base_dir_whole= r"/data1/paritosh.pandey/CIGDataset/CroppedImages"
-    base_dir_split= r"/data1/paritosh.pandey/CIGDataset/SplitData"
+    base_dir_whole= r"/data1/naquib.alam/CIGDataset/CroppedImages"
+    base_dir_split= r"/data1/naquib.alam/CIGDataset/SplitData"
     #print(base_dir_whole,base_dir_split)
     #x="/data1/naquib.alam/ShelfMonitoring/ObjectDetection/CiggarateDataset/grocerydataset/CroppedImageCategoryRefined/WholeData"
     #print("Trax",type(base_dir_whole),x==base_dir_whole)
